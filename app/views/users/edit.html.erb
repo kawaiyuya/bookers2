@@ -1,0 +1,15 @@
+<h1>usersinfo</h1>
+<ul>
+	<% @user.errors.full_messages.each do |message| %>
+	<li><%= message %></li>
+	<% end %>
+</ul>
+<%= form_for(@user) do |f|%>
+    <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg"%>
+    <%= f.attachment_field :profile_image, placeholder: "プロフィール画像",class:"user_image"%>
+    <h4>name</h4>
+    <%= f.text_field :name,class:"name"%>
+    <h4>introdact</h4>
+    <%= f.text_area :introduction_id,class:"introduction"%>
+    <%= f.submit 'Userupdate' %>
+<% end %>
