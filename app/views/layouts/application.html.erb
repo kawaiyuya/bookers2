@@ -29,7 +29,7 @@
           <li>
             <% if user_signed_in? %>
           <li>
-            <%= link_to"ホーム",user_path(current_user.id),class:"glyphicon glyphicon-home home" %>
+            <%= link_to"ホーム",user_path(current_user.id),class:"glyphicon glyphicon-home user_#{current_user.id}" %>
           </li>
           <li>
             <%= link_to"User一覧",users_path,class:"glyphicon glyphicon-user users"%>

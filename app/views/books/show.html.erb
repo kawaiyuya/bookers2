@@ -20,7 +20,7 @@
 
 			    <tbody>
 			        <tr>
-			        	<th><%=  attachment_image_tag @user, :profile_image, :fill, 100, 100 %><br><%= link_to @user.name,user_path(@user)%></th>
+			        	<th><%=  attachment_image_tag @user, :profile_image, :fill, 100, 100 %><br><%= link_to @user.name,user_path(@user),class:"user_#{@user}"%></th>
 						<th><%= @book.title%></th>
 						<th><%= @book.opinion %></th>
 						<% if current_user == @book.user %>
