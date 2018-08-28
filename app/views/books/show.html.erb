@@ -2,7 +2,7 @@
 <div class="row">
 
 	<div class="col-md-3">
-		<%= render'books/list' %>
+		<%= render'books/list', book: @book, user: @user %>
 	</div>
 
 
@@ -21,11 +21,11 @@
 			    <tbody>
 			        <tr>
 			        	<th><%=  attachment_image_tag @user, :profile_image, :fill, 100, 100 %><br><%= link_to @user.name,user_path(@user),class:"user_#{@user}"%></th>
-						<th><%= @book.title%></th>
-						<th><%= @book.opinion %></th>
+						<th><%= @bookf.title %></th>
+						<th><%= @bookf.opinion %></th>
 						<% if current_user == @book.user %>
-						<th><%= link_to'edit', edit_book_path(@book.id),class:"btn-sm btn-success edit_book_#{@book.id}"%></th>
-						<th><%= link_to'destroy', book_path(@book),class:"tn-sm btn-danger destroy_book_#{@book}", method: :delete, "data-confirm" => "本当に削除しますか？"%></th>
+						<th><%= link_to'edit', edit_book_path(@bookf.id),class: "btn-sm btn-success edit_book_#{@bookf.id}"%></th>
+						<th><%= link_to'destroy', book_path(@bookf.id),class: "tn-sm btn-danger destroy_book_#{@bookf.id}", method: :delete, "data-confirm" => "本当に削除しますか？"%></th>
 						<% end %>
 			        </tr>
 				</tbody>

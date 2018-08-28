@@ -13,19 +13,19 @@
 	<tbody>
 		<tr>
 			<th>name</th>
-			<th><%= @user.name %></th>
+			<th><%= user.name %></th>
 		</tr>
 		<tr>
 			<th>Introduction</th>
-		 	<th><%= @user.introduction_id%></th>
+		 	<th><%= user.introduction_id%></th>
 		</tr>
 	</tbody>
 </table>
 <div>
 <%= link_to"",edit_user_path(current_user),class:"col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_#{current_user.id}"%>
-<% if @book.errors.any? %>
+<% if book.errors.any? %>
 <ul>
-<% @book.errors.full_messages.each do |message| %>
+<% book.errors.full_messages.each do |message| %>
 <li><%= message %></li>
 <% end %>
 </ul>
@@ -35,7 +35,7 @@
 
 <h2>New Book</h2>
 
-	<%= form_for(@book) do |f| %>
+	<%= form_for(book) do |f| %>
 		<h4>Title</h4>
 		<%= f.text_field :title,class:"col-xs-12 book_title"%>
 		<h4>Opinion</h4>
