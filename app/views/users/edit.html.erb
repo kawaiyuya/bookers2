@@ -5,7 +5,7 @@
 	<% end %>
 </ul>
 <%= form_for(@user) do |f|%>
-    <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg"%>
+    <%= attachment_image_tag @user, :profile_image,fallback: "no_image.jpg", size: '100x100' %>
     <%= f.attachment_field :profile_image, placeholder: "プロフィール画像",class:"user_image"%>
     <h4>name</h4>
     <%= f.text_field :name,class:"name"%>

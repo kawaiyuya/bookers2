@@ -29,7 +29,7 @@
           <li>
             <% if user_signed_in? %>
           <li>
-            <%= link_to"ホーム",user_path(current_user.id),class:"glyphicon glyphicon-home user_#{current_user.id}" %>
+            <%= link_to"ホーム",user_path(current_user.id),class:"glyphicon glyphicon-home home" %>
           </li>
           <li>
             <%= link_to"User一覧",users_path,class:"glyphicon glyphicon-user users"%>
@@ -44,16 +44,17 @@
           <h1></h1>
           </li>
           <li >
-           <%= link_to"Home",root_path,class:"glyphicon glyphicon-home home"%>
+           <%= link_to"トップ",root_path,class:"glyphicon glyphicon-home"%>
           </li>
           <li >
-            <%= link_to"about",home_about_path,class:"glyphicon glyphicon-link about" %>
+            <%= link_to"アバウト",home_about_path,class:"glyphicon glyphicon-link about" %>
           </li>
           <li >
-            <%= link_to 'singup',users_sign_up_path,class:"glyphicon glyphicon-edit sign_up"%>
+            <%= link_to 'サインアップ',users_sign_up_path,class:"glyphicon glyphicon-edit sign_up"%>
           </li>
           <li >
-            <%= link_to"login",users_sign_in_path,class:"glyphicon glyphicon-log-in sign_in"%>
+
+            <%= link_to"ログイン",users_sign_in_path,class:"glyphicon glyphicon-log-in sign_in"%>
           </li>
           <% end %>
       </ul>
